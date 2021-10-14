@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: frontend
+    build: 
+        context: ./docker-frontend
+    ports:
+      - "4200:80"
+  service:
+    container_name: service
+    build:
+        context: ./docker-service
+    ports: 
+      - "4242:4242"
